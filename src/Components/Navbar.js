@@ -29,10 +29,15 @@ export const Navbar = ({ user }) => {
                 <span><Link to="/" className='navlink'>SnapBuy</Link></span>
             </div>
             {!user && <div className='rightside'>
+                <span><Link to="/cart" className='navlink'>My Orders</Link></span>
+                <span><Link to="/" className='navlink'>Contact</Link></span>
                 <span><Link to="signup" className='navlink'>SIGN UP</Link></span>
                 <span><Link to="login" className='navlink'>LOGIN</Link></span>
             </div>}
             {user && <div className='rightside'>
+                <span><Link to="myorders" className='navlink'>My Orders</Link></span>
+                <span><Link to="/" className='navlink'>Contact</Link></span>
+                <span><Link to="/" className='navlink'>FAQs</Link></span>
                 <span><Link to="/" className='navlink'>{user}</Link></span>
                 <span><Link to="cartproducts" className='navlink'><Icon icon={cart} /></Link></span>
                 <span className='no-of-products'>{totalQty}</span>

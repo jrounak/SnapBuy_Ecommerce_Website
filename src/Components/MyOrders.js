@@ -1,26 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Navbar } from './Navbar';
-import { Products } from './Products'
+import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 import { auth } from '../Config/Config'
-
-export const Home = ({ user }) => {
-
+export const MyOrders = ({user}) => {
     const history = useHistory();
-
     useEffect(() => {
-        // to signup
         auth.onAuthStateChanged(user => {
             if (!user) {
                 history.push('/login');
             }
         })
     })
+  return (
+    
 
-    return (
-        <div className='wrapper'>
-            <Navbar user={user} />
-            <Products />
-        </div>
-    )
+    <>
+    <Navbar user={user} />
+    <div>MyOrders</div>
+    </>
+  )
 }
+

@@ -75,7 +75,7 @@ body {
     border-radius: 3px;
     position: absolute;
     top: -5px;
-    left: 33px;
+    left: 222px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +85,8 @@ body {
     font-family: "Audiowide", Concert One;
     font-size: 40px;
     font-weight: 600;
-    text-decoration: #000;
+    text-decoration: none;
+    color: #000;
 }
 .logout-btn {
     padding: 5px;

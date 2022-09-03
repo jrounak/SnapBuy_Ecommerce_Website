@@ -10,7 +10,7 @@ import { CartContextProvider } from './Global/CartContext'
 import { Cart } from './Components/Cart'
 import { AddProducts } from './Components/AddProducts'
 import { Cashout } from './Components/Cashout'
-
+import { MyOrders } from './Components/MyOrders'
 export class App extends Component {
 
     state = {
@@ -55,6 +55,8 @@ export class App extends Component {
                             <Route path="/addproducts" component={AddProducts} />
                             {/* cashout */}
                             <Route path='/cashout' component={() => <Cashout user={this.state.user} />} />
+                            <Route path="/myorders" component={MyOrders} />
+                            {/* cashout */}
                             <Route component={NotFound} />
                         </Switch>
                     </BrowserRouter>
